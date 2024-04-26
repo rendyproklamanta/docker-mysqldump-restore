@@ -1,7 +1,6 @@
 #!/bin/bash
 
-export HOST="maxscale"
-export PORT="6033"
-export USER="super_usr"
-export PASS="super_pass"
+export DB_HOST="mysql"
+export DB_PORT="3306"
 export DB_NAME="dbname_dbs"
+export DB_PASS="dbname_pass"
