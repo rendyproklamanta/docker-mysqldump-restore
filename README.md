@@ -21,7 +21,7 @@ If you import or dump large data, you can use screen
 $ apt install screen -y
 $ screen -S <screen_name>
 
->> Execute command
+>> Execute the commands here <<
 
 $ CTRL + A + D
 $ screen -ls
