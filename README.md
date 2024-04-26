@@ -14,3 +14,16 @@ chmod +x mysqldump.sh && ./mysqldump.sh
 ```
 chmod +x import.sh && ./import.sh
 ```
+
+### NOTE
+If you import or dump large data, you can use screen
+```
+$ apt install screen -y
+$ screen -S <screen_name>
+
+>> Execute command
+
+$ CTRL + A + D
+$ screen -ls
+$ screen -r <screen_name>
+```
