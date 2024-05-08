@@ -6,4 +6,5 @@
 export DB_HOST="mysql_mysql"
 export DB_PORT="3306"
 export DB_NAME="dbname_dbs"
+export DB_USER="root"
 export DB_PASS="user_pass"

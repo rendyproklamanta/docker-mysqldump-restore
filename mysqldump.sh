@@ -15,7 +15,7 @@ echo "===[ Dumping $DB_NAME has started ]==="
 echo
 
 # exec to container
-docker exec -it -e DB_HOST=$DB_HOST -e DB_PORT=$DB_PORT -e DB_PASS=$DB_PASS -e DB_NAME=$DB_NAME $(docker ps -q -f name=$DB_HOST) sh -c 'mysqldump -P $DB_PORT -uroot -p$DB_PASS $DB_NAME -R -E --triggers --routines --single-transaction --quick | gzip -9 | pv > $DB_NAME.sql.gz'
+docker exec -it -e DB_HOST=$DB_HOST -e DB_PORT=$DB_PORT -e DB_USER=$DB_USER -e DB_PASS=$DB_PASS -e DB_NAME=$DB_NAME $(docker ps -q -f name=$DB_HOST) sh -c 'mysqldump -P $DB_PORT -u$DB_USER -p$DB_PASS $DB_NAME -R -E --triggers --routines --single-transaction --quick | gzip -9 | pv > $DB_NAME.sql.gz'
 
 # copy file from container to local machine
 docker cp $(docker ps -q -f name=$DB_HOST):/$DB_NAME.sql.gz .
